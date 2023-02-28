@@ -10,6 +10,12 @@ const App = () => {
   return (
     <div>
       <h1>React : Context API</h1>
+      <p>
+        <i>
+          react Context API is a way to share data between components without
+          having to pass props through each level of component tree{" "}
+        </i>
+      </p>
       <div>
         <data.Provider value={name}>
           <data2.Provider value={location}>
