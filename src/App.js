@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext } from "react";
+import ComA from "./components/ComA";
 
-function App() {
+const data = createContext();
+const data2 = createContext();
+
+const App = () => {
+  const name = "Arif";
+  const location = "Gauhati";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>React : Context API</h1>
+      <div>
+        <data.Provider value={name}>
+          <data2.Provider value={location}>
+            <ComA />
+          </data2.Provider>
+        </data.Provider>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
+export { data, data2 };
